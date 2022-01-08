@@ -19,3 +19,11 @@ def gcd_recursive(m, n):
         return m
     else:
         return gcd_recursive(n, m%n)
+
+# Test gcd_loop vs gcd_recursive
+
+def gcd_multi(*args):
+    gcd = args[0]
+    for i in args[1:]:
+        gcd = gcd_loop(gcd, i)
+    return gcd
