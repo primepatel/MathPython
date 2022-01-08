@@ -36,3 +36,9 @@ def is_coprime(a, b):
 
 def lcm_loop(m, n = 1):
     return abs(m*n)//gcd_loop(m, n)
+
+def lcm_multi(*args):
+    lcm, n = args[0], args[0]
+    for i in args[1:]:
+        lcm = lcm_loop(lcm, i)
+    return lcm
