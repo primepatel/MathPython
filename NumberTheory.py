@@ -33,3 +33,6 @@ def is_coprime(a, b):
         return True
     else:
         return False
+
+def lcm_loop(m, n = 1):
+    return abs(m*n)//gcd_loop(m, n)
