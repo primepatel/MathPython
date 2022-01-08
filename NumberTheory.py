@@ -27,3 +27,9 @@ def gcd_multi(*args):
     for i in args[1:]:
         gcd = gcd_loop(gcd, i)
     return gcd
+
+def is_coprime(a, b):
+    if gcd_loop(a, b) == 1:
+        return True
+    else:
+        return False
