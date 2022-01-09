@@ -56,3 +56,9 @@ def factorization(number):
                 factors[i] = 1
                 break
     return factors
+
+
+def euler_phi(number):
+    for i in factorization(number):
+        number = number*(i-1)//i
+    return number
