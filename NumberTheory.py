@@ -42,3 +42,17 @@ def lcm_multi(*args):
     for i in args[1:]:
         lcm = lcm_loop(lcm, i)
     return lcm
+
+def factorization(number):
+    factors = {}
+    n = 0
+    while number != 1:
+        for i in range(2, number+1):
+            n += 1
+            if number % i == 0 :
+                number //= i
+                if i in factors:
+                    factors[i] += 1
+                factors[i] = 1
+                break
+    return factors
