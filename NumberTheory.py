@@ -44,6 +44,8 @@ def lcm_multi(*args):
     return lcm
 
 def factorization(number):
+    """try using prime generators
+    function used in phi function where factorization returns dictionary"""
     factors = {}
     n = 0
     while number != 1:
