@@ -73,3 +73,9 @@ def euler_phi(number):
     for i in factorization(number):
         number = number*(i-1)//i
     return number
+
+
+# prime
+# composite
+# euler fermats wilson thm
+# prime generator
