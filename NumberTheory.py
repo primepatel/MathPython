@@ -22,6 +22,15 @@ def gcd_recursive(m, n):
 
 # Test gcd_loop vs gcd_recursive
 
+
+def eea(m, n):
+    a0, a1, b0, b1 = 1, 0, 0, 1
+    while n != 0:
+        m, n, q = n, m%n, m//n
+        a0, a1, b0, b1 = b0, b1, a0 - q*b0, a1 - q*b1
+    return m, a0, a1
+
+
 def gcd_multi(*args):
     gcd = args[0]
     for i in args[1:]:
