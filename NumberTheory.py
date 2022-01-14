@@ -86,6 +86,8 @@ def is_prime(number):
                 return False
         return True
 
-# composite
+def is_composite(number):
+    return not is_prime(number)
+
 # euler fermats wilson thm
 # prime generator
