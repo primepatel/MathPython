@@ -91,6 +91,6 @@ def is_prime(number):
 def is_composite(number):
     return not is_prime(number)
 
-print(is_prime(143))
+
 # euler fermats wilson thm
 # prime generator
