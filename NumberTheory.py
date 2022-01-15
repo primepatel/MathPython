@@ -81,7 +81,9 @@ def is_prime(number):
     elif number == 2:
         return True
     else:
-        for i in range(3, int(number**0.5)+1, 1):
+        if number%2 == 0:
+            return False
+        for i in range(3, int(number**0.5)+1, 2):
             if number%i == 0:
                 return False
         return True
@@ -89,5 +91,6 @@ def is_prime(number):
 def is_composite(number):
     return not is_prime(number)
 
+print(is_prime(143))
 # euler fermats wilson thm
 # prime generator
