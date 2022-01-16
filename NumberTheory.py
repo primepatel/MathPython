@@ -98,9 +98,10 @@ class Num_pow:
         self.power = power
 
     def __mod__(self, n):
+        """used euler's theorem"""
         return (self.number ** (self.power % euler_phi(n))) % n
 
-print(Num_pow(123, 345)%5, (123**345) % 5)
+# print(Num_pow(123, 345)%5, (123**345) % 5)
 
 # wilson thm
 # prime generator
