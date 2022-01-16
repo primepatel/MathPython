@@ -92,5 +92,15 @@ def is_composite(number):
     return not is_prime(number)
 
 
-# euler fermats wilson thm
+class Num_pow:
+    def __init__(self, number, power = 1) -> None:
+        self.number = number
+        self.power = power
+
+    def __mod__(self, n):
+        return (self.number ** (self.power % euler_phi(n))) % n
+
+print(Num_pow(123, 345)%5, (123**345) % 5)
+
+# wilson thm
 # prime generator
