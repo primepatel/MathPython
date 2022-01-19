@@ -103,5 +103,19 @@ class Num_pow:
 
 # print(Num_pow(123, 345)%5, (123**345) % 5)
 
-# wilson thm
-# prime generator
+def primes(m):
+    yield 2
+    m -= 1
+    P, n = [2], 3
+    while m != 0:
+        for i in P:
+            if n%i == 0:
+                break
+        else:
+            m -= 1
+            yield n
+            P.append(n)
+        n += 2
+
+# for i in primes(10):
+#     print(i)
