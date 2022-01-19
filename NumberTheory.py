@@ -119,3 +119,23 @@ def primes(m):
 
 # for i in primes(10):
 #     print(i)
+
+def prime(index):
+    if index == 1:
+        return 2
+    P = [2]
+    index -= 1
+    n = 3
+    p = 2
+    while index != 0:
+        for i in P:
+            if n%i == 0:
+                break
+        else:
+            p = n
+            index -= 1
+            P.append(n)
+        n += 2
+    return p
+
+print(prime(12))
