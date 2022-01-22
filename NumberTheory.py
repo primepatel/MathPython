@@ -56,18 +56,18 @@ def factorization(number):
     """try using prime generators
     function used in phi function where factorization returns dictionary"""
     factors = {}
-    n = 0
     while number != 1:
         for i in range(2, number+1):
-            n += 1
             if number % i == 0 :
                 number //= i
                 if i in factors:
                     factors[i] += 1
+                    break
                 factors[i] = 1
                 break
     return factors
 
+print(factorization(25))
 
 def euler_phi(number):
     for i in factorization(number):
@@ -156,5 +156,5 @@ def prime_less_than(n):
                 P.append(p)            
             p += 2
 
-for i in prime_less_than(29):
-    print(i)
+# for i in prime_less_than(29):
+#     print(i)
