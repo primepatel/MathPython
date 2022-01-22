@@ -138,4 +138,23 @@ def prime(index):
         n += 2
     return p
 
-print(prime(12))
+# print(prime(12))
+
+def prime_less_than(n):
+    if n < 2:
+        yield None
+    else:
+        yield 2
+        P = [2]
+        p = 3
+        while p<=n:
+            for i in P:
+                if p%i == 0:
+                    break
+            else:
+                yield p
+                P.append(p)            
+            p += 2
+
+for i in prime_less_than(29):
+    print(i)
