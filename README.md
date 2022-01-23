@@ -24,4 +24,8 @@ Num_pow
 
 Rational
 Complex Numbers
-Guassian Integers and primes
+
+## Optimization
+
+is_prime requires Optimization using prime generator
+is_gprime method optimization gcd(a,b) = 1 and a%2 != b%2 for non gprime numbers
