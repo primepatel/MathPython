@@ -67,7 +67,7 @@ def factorization(number):
                 break
     return factors
 
-print(factorization(25))
+# print(factorization(25))
 
 def euler_phi(number):
     for i in factorization(number):
@@ -158,3 +158,24 @@ def prime_less_than(n):
 
 # for i in prime_less_than(29):
 #     print(i)
+
+class G_Int:
+    def __init__(self, a, b) -> None:
+        self.a = a
+        self.b = b
+        self.norm = a*a + b*b
+    def is_gprime(self):
+        if is_prime(self.norm):
+            return True
+        print(self.norm)
+        factors = factorization(self.norm)
+        print(factors)
+        k_v = tuple(factors.items())[0]
+        print(k_v)
+        if len(factors) == 1:
+            if factors[k_v[0]] == 2 and k_v[1]%4 == 3:
+                return True
+        return False
+
+
+# print(G_Int(3, 2).is_gprime())
